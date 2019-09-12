@@ -1,6 +1,8 @@
 package com.orangeHRproject.testScripts;
 
 import org.testng.annotations.Test;
+
+import com.orangeHRproject.Utils.Utils_implicitlyWait;
 import com.orangeHRproject.config.Propertyfile;
 import com.orangeHRproject.pom.Pom_assignLeave;
 import com.orangeHRproject.testbaseClass.Baseclass;
@@ -16,7 +18,9 @@ public class Testscripts_assignLeave extends Baseclass{
 		Pom_assignLeave.assignleave_toDate(driver).clear();
 		Pom_assignLeave.assignleave_toDate(driver).sendKeys(toDate);
 		Pom_assignLeave.assignleave_Comment(driver).sendKeys(Comment);
+		Utils_implicitlyWait.impWait3();
 		Pom_assignLeave.assignleave_assignBtn(driver).click();
+		Utils_implicitlyWait.impWait3();
 		Pom_assignLeave.assignleave_assignPopup(driver).click();
 
 	}
